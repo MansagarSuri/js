@@ -49,7 +49,7 @@ const user = {
     username: "hitesh",
     prices: 199
 }
-
+//taking an object as a input in a function
 function handleObject(anyobject){
     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 }
