@@ -14,6 +14,8 @@ let age = 18
 let isLoggedIn = false
 let state;
 
+//Datatypes:
+
 // number => ±(2pow53-1) 
 // bigint
 // string => ""
