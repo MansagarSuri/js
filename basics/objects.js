@@ -1,4 +1,4 @@
-//singleton: made when objects are declared using constructeor way.. and not object literals..
+//singleton: made when objects are declared using constructor way.. and not object literals..
 //Object.create
 //object literals
 //symbol
@@ -18,6 +18,7 @@ const jsUsers = {
 // console.log(jsUsers["email"]);//this way is better cuz agr object ki key mai space ho to . wala nahi chalta
 // console.log(jsUsers["full name"]);
 // console.log([mySym]);
+console.log(jsUsers.lastLoginDays[2]);
 
 //to change a value of object..
 jsUsers.email = "mansagar@google.com";
@@ -27,7 +28,7 @@ jsUsers.email = "mansagar@google.com";
 // Object.freeze(jsUsers);
 jsUsers.email = "mansagar124@google.com";
 
-//in js functions can also be treated as 
+//in js functions can also be treated as 1st class citizens just like variables
 
 jsUsers.greetings = function(){
     console.log("Hi there User");
@@ -56,7 +57,7 @@ tinderUser.age = 324;
 const regularUser ={
     email : "abc@gmail.com",
     fullname:{
-        firstName: "Sagy",
+        // firstName: "",
         lastName: "Suri"
     }
 }
@@ -91,27 +92,27 @@ const user =[
         email: "bc@gmail.com"
     }
 ]
-user[1].email;
+//console.log(user[1].email);
 
-// console.log(tinderUser);
+ //console.log(tinderUser);
 // console.log(Object.keys(tinderUser)); //returns an array of keys..
 // console.log(Object.values(tinderUser));
-// console.log(Object.entries(tinderUser));
-// console.log(tinderUser.hasOwnProperty('fname'));
+ //console.log(Object.entries(tinderUser));
+ console.log(tinderUser.hasOwnProperty('fname'));
 
 //------------------------------------------------------
 // //DESTRUCTING of objects..
-// const course ={
-//     Name : "DSA",
-//     fullname:{
-//         firstName: "DATA",
-//         lastName: "STructure and Algorithm"
-//     },
-//     price: 999
-// }
+const course ={
+    Name : "DSA",
+    fullname:{
+        firstName: "DATA",
+        lastName: "STructure and Algorithm"
+    },
+    price: 999
+}
 // //console.log(course.price);
-// const {price} = course; //deconstruction of an object
-// console.log(price);
+ const {firstName: naam} = course.fullname; //deconstruction of an object
+ console.log(naam);
 // const {fullname:{lastName}}= course; //
 // console.log(lastName);
 const university = {
@@ -136,4 +137,5 @@ const university = {
 };
 
 const {location:{address}}= university;
-console.log(city);
+console.log(university["location"]["city"]);
+// console.log(location:{city});
